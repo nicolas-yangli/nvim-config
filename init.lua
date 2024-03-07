@@ -29,8 +29,7 @@ vim.api.nvim_create_autocmd(
   }
 )
 
-vim.keymap.set('t', '<A-A>', ':q')
-vim.keymap.set('t', '<A-C>', '<C-\\><C-n>')
+vim.keymap.set('t', '<A-c>', '<C-\\><C-n>')
 vim.keymap.set('n', '<Leader>ts', ':vsplit term://$SHELL<Enter>')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
