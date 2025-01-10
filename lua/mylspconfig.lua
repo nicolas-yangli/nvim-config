@@ -4,9 +4,7 @@ function M.setup()
   lspconfig = require('lspconfig')
 
   lspconfig.pyright.setup({})
-  lspconfig.bashls.setup({
-    cmd = {"podman", "run", "--rm", "-i", "--workdir", vim.loop.cwd(), "--pid", "host", "-v", "/home:/home:ro", "nicolasyang.me/bash-language-server"}
-  })
+  lspconfig.bashls.setup({})
 
   -- Use LspAttach autocommand to only map the following keys
   -- after the language server attaches to the current buffer
