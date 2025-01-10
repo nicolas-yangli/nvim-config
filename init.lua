@@ -97,7 +97,11 @@ require('lazy').setup({
   },
   {
     "hrsh7th/nvim-cmp",
-    ft = { 'python', },
+    ft = {
+      'python',
+      'cucumber',
+      'sh',
+    },
     dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-nvim-lsp",
