@@ -93,7 +93,9 @@ require('lazy').setup({
   },
   {
     "nicolas-yangli/nvim-git-blame",
-    build = ":UpdateRemotePlugins",
+    config = function ()
+      require('nvim-git-blame').setup()
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
