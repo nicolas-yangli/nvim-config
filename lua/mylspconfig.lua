@@ -1,10 +1,20 @@
 local M = {}
 
 function M.setup()
-  lspconfig = require('lspconfig')
-
-  lspconfig.pyright.setup({})
-  lspconfig.bashls.setup({})
+  vim.lsp.enable('pyright')
+  vim.lsp.enable('bashls')
+  vim.lsp.enable('ansiblels')
+  vim.lsp.enable('clangd')
+  vim.lsp.config('rust_analyzer', {
+    settings = {
+      ['rust-analyzer'] = {
+        diagnostics = {
+          enable = false;
+        }
+      }
+    }
+  })
+  vim.lsp.enable('rust_analyzer')
 
   -- Use LspAttach autocommand to only map the following keys
   -- after the language server attaches to the current buffer
